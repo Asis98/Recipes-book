@@ -7,6 +7,7 @@ provide inspiration for meals as well as help users do the following:
 • Filter out recipes according to some criteria
 
 # Application startup 
+Before some execution running the following command: npm i (BE and FE side)
 You need to start the server by running the following command in the recipes-bookapi folder: npm run server:start
 The server will be running at http://localhost:3001.
 Then, you start the frontend by running the following command in the recipes-bookfront folder: ng serve --proxy-config proxy.config.json
