@@ -14,16 +14,27 @@ import {DialogModule} from 'primeng/dialog';
 import {InputTextModule} from 'primeng/inputtext';
 import {RatingModule} from 'primeng/rating';
 import {RippleModule} from 'primeng/ripple';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
+import { RecipesFilterComponent } from './recipes-filter/recipes-filter.component';
+import { RecipeCreationComponent } from './recipe-creation/recipe-creation.component';
 import { AppRoutingModule } from './app-routing.module';
+import {MenubarModule} from 'primeng/menubar';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
+import {FileUploadModule} from 'primeng/fileupload';
+import { MessageService } from 'primeng/api';
+
 @NgModule({
   declarations: [
     AppComponent,
     RecipesListComponent,
     HeaderComponent,
     HomeComponent,
+    RecipesFilterComponent,
+    RecipeCreationComponent,
+    RecipeDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +49,14 @@ import { AppRoutingModule } from './app-routing.module';
     RippleModule,
     RatingModule,
     FormsModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    AppRoutingModule, 
+    MenubarModule,
+    RadioButtonModule,
+    FileUploadModule
+
   ],
-  providers: [RecipesService],
+  providers: [RecipesService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
